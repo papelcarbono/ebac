@@ -1,0 +1,123 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} /* isso aqui é chamado de ''dar um resete'' na pagina */
+
+body > header {  /* se vc usar um sinal de > vc limita ao filho primario, mesmo havendo outros descentendes*/
+    background-color: brown;
+    padding: 16px 0;
+    color: azure
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 16px;
+} /* aqui eu estou botando só os elementos não odernados LI do html em linha horizontal */ 
+
+.container {
+    width: 1366px; 
+    margin: 0 auto;
+}
+
+.articles {
+    display: flex; /*display: flex oferece uma maneira poderosa e flexível de criar layouts responsivos e complexos em CSS,*/
+    flex-wrap: wrap; /*flex-wrap especifica que os itens devem ser dispostos em linha, mesmo se precisar criar uma linha adicional*/
+    justify-content: space-between;  /*especifica que o espaço disponível entre os itens flexíveis deve ser distribuído de maneira uniforme, 
+    com o primeiro item alinhado à borda inicial do contêiner e o último item alinhado à borda final do contêiner*/
+}
+
+.articles article img { /* aqui eu fui andando de caminho em caminho até achar o caminho das imagens da classe articles para mudar apenas elas */
+    height: 180px;
+}
+
+.articles article {  /* eu fiz cada artigo de dentro da classe articles ficasse com 20% da area disponivel*/
+    width: 20%;
+}
+
+#banco {position: fixed; bottom: 0; right: 0;
+    width: 13%;
+    } /*position muda a posição de um elemento, fixed fixa independente da rolagem, 
+    absolute mantem ela acima de tudo independete de outros conteudos, 
+    e relative adiciona ao ''PAI'' que os filhos n podem sair de sua relatividade */
+
+
+section {
+    padding: 16px 0;
+}
+
+section h2,
+.articles article {
+    margin-bottom: 16px ;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a {
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none; /* TAG A , que linka, vem com text decoration underline por padrão. */
+    font-weight: 900
+}
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article a:hover{
+    text-decoration: underline;
+
+}
+.articles article h3 {
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 42px;
+}
+
+#sports {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+#sports .articles article a {
+    background-color: chartreuse;
+}
+
+#economy {
+    background-color:rgb(179, 155, 23);
+    color: bisque;
+    
+}
+
+#economy .articles article a {
+    background-color: blue;
+}
+
+#games{
+    background-color: rgb(74, 169, 233);
+}
+
+#esports{
+    background-color: black;
+    color: aliceblue;
+}
+
+#esports .articles article a {
+    background-color: red;
+}
